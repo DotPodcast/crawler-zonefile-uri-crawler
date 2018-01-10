@@ -1,0 +1,13 @@
+{
+  "es": {
+    "host": "localhost",
+    "port": "9200"
+  },
+  "rabbit": {
+    "host": "localhost",
+    "inQueue": "zonefile_queue",
+    "persistQueue": "persist_queue",
+    "feedQueue": "feed_queue",
+    "headerQueue": "header_queue"
+  }
+}

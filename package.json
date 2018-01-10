@@ -1,0 +1,37 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "nodemon src/app.js --exec 'yarn lint; babel-node'",
+    "build": "babel src -d dist",
+    "serve": "node dist/app.js",
+    "test": "mocha -r chai/register-expect --compilers js:babel-register",
+    "test:watch": "mocha -w -r chai/register-expect --compilers js:babel-register",
+    "seed": "babel-node test/seedQueue"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-airbnb": "^2.4.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^4.1.0",
+    "nodemon": "^1.14.7"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "axios": "^0.17.1",
+    "elasticsearch": "^14.0.0",
+    "nconf": "^0.10.0",
+    "winston": "^2.4.0"
+  }
+}
