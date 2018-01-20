@@ -1074,6 +1074,10 @@ crypto-random-string@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
 
+csv-parse@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-2.0.0.tgz#4ea22c973233987f07688c601a2d460234ff56d1"
+
 cycle@1.0.x:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/cycle/-/cycle-1.0.3.tgz#21e80b2be8580f98b468f379430662b046c34ad2"

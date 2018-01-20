@@ -10,7 +10,8 @@
     "serve": "node dist/app.js",
     "test": "mocha -r chai/register-expect --compilers js:babel-register",
     "test:watch": "mocha -w -r chai/register-expect --compilers js:babel-register",
-    "seed": "babel-node test/seedQueue"
+    "seed": "babel-node test/seedQueue",
+    "csv-seed": "babel-node test/seedFromCsv"
   },
   "author": "",
   "license": "UNLICENSED",
@@ -19,6 +20,7 @@
     "babel-preset-airbnb": "^2.4.0",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
+    "csv-parse": "^2.0.0",
     "eslint": "^4.14.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-chai-friendly": "^0.4.1",
