@@ -24,7 +24,7 @@ open.then((conn) => {
         let record;
         while (record = parser.read()) {
           const msg = {
-            uri: `http://dotpodcast-pseudo-web-d5clkna-1128393060.us-east-1.elb.amazonaws.com/${record[2]}/head.json`,
+            uri: `https://ph.dotpodcast.co/${record[2]}/head.json`,
             mergeData: {
               docId: `${record[2]}.verified.podcast`,
             },
@@ -34,7 +34,7 @@ open.then((conn) => {
         }
       });
 
-      fs.createReadStream(path.join(__dirname, './fixtures/half-pruned.csv')).pipe(parser);
+      fs.createReadStream(path.join(__dirname, './fixtures/pruned.csv')).pipe(parser);
 
       setTimeout(() => process.exit(), 2000);
     });

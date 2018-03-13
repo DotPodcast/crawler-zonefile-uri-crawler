@@ -1,14 +1,13 @@
 import winston from 'winston';
 import axios from 'axios';
 import config from './config';
+import processTaxonomies from './processTaxonomies';
 
 const inQ = config.get('rabbit:inQueue');
 const persistQ = config.get('rabbit:persistQueue');
 
 const isPodcastHeader = json => !!json.items_url;
-
 const isEpisodeFeedPage = json => !!json.items;
-
 const isUser = json => json.length && json[0] && json[0].token;
 
 const getNextPage = (json) => {
@@ -37,6 +36,7 @@ const work = async (doc, channel, msg) => {
         index = 'podcasts';
         type = 'podcast';
         id = doc.mergeData.docId;
+        data.taxonomy_hierarchy = processTaxonomies(data);
       } else if (isUser(data)) {
         index = 'people';
         type = 'person';
